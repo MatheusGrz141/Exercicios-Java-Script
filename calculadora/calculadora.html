@@ -1,0 +1,129 @@
+<html>
+
+<head>
+    <title>Calculadora</title>
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            background-image: url(https://img.ifunny.co/images/9029fdd8f64ec66083cf4f5786d4fccd05c30eebbd2caf2a41539c5f06096f1d_1.jpg);
+
+
+
+        }
+
+        .card {
+            width: 30%;
+            height: auto;
+            margin: 50px auto;
+            text-align: center;
+            background-color: aquamarine;
+            border-radius: 5px;
+            border: 3px solid black;
+            box-shadow: 10px 10px 20px black;
+
+
+        }
+
+        .card input {
+            width: 80%;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .card button {
+            background-color: rgb(192, 192, 30);
+            width: 40%;
+            height: 5%;
+            margin: 20px;
+            border-radius: 5px;
+            box-shadow: 10px 10px 20px black;
+
+        }
+
+        .card button:hover {
+            background-color: bisque;
+            transition: 0.21s;
+            cursor: pointer;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Calculadora toper</h1>
+
+        <div>
+            <input type="number" placeholder="Digite um Número " id="numero1">
+        </div>
+        <div>
+            <input type="number" placeholder="Digite um Número " id="numero2">
+        </div>
+        <button onclick="somar()">Somar</button>
+        <button onclick="subtrair()">Subtrair</button>
+        <button onclick="multiplicar()">multiplicar</button>
+        <button onclick="dividir()">dividir</button>
+    </div>
+</body>
+<script>
+    function somar() {
+        let n1 = document.getElementById("numero1").value
+        let n2 = document.getElementById("numero2").value
+
+        let n1real = parseFloat(n1)
+        let n2real = parseFloat(n2)
+
+
+        let resposta = n1real + n2real
+
+        window.alert("resposta: " + resposta)
+
+    }
+    function subtrair() {
+        let n1 = document.getElementById("numero1").value
+        let n2 = document.getElementById("numero2").value
+
+        let n1real = parseFloat(n1)
+        let n2real = parseFloat(n2)
+
+
+        let resposta = n1real - n2real
+
+        window.alert("resposta: " + resposta)
+
+    }
+    function multiplicar() {
+        let n1 = document.getElementById("numero1").value
+        let n2 = document.getElementById("numero2").value
+
+        let n1real = parseFloat(n1)
+        let n2real = parseFloat(n2)
+
+
+        let resposta = n1real * n2real
+
+        window.alert("resposta: " + resposta)
+
+    }
+    function dividir() {
+        let n1 = document.getElementById("numero1").value
+        let n2 = document.getElementById("numero2").value
+
+        let n1real = parseFloat(n1)
+        let n2real = parseFloat(n2)
+
+        if (n2real == 0) {
+            window.alert("Impossivel dividir por 0")
+        } else  {
+            let resposta = n1real / n2real
+
+            window.alert("resposta: " + resposta)
+        }
+
+    }
+
+</script>
+
+</html>
